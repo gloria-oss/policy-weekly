@@ -1,6 +1,8 @@
 # Policy Weekly - 政策研究周报生成器
 
-一个自动化生成政策研究周报的 Claude Code Skill，帮助你每周自动监测 AI 政策、互联网监管、投融资政策动态。
+一个自动化生成政策研究周报的 AI Skill，帮助你每周自动监测 AI 政策、互联网监管、投融资政策动态。
+
+> **兼容性说明**：本 Skill 采用通用 AI Skill 格式（标准 YAML frontmatter + Markdown），兼容所有支持该格式的 AI 编程助手，包括 Claude Code、Codeflicker 等，并非 Claude Code 专属。
 
 ## ✨ 功能特点
 
@@ -15,20 +17,17 @@
 
 ### 前置要求
 
-1. **Claude Code CLI** - [安装指南](https://github.com/anthropics/claude-code)
+1. **支持 AI Skill 格式的工具**，如 Claude Code、Codeflicker 等
 2. **Tavily API Key** - [获取地址](https://tavily.com)
-3. **tavily-search skill** - 已安装（通常默认安装）
+3. **tavily-search skill** - 需在你使用的工具中已安装
 
 ### 安装步骤
 
-**方法1：手动安装**
-
 ```bash
 # 1. 下载或克隆此 skill
-git clone https://github.com/your-username/policy-weekly.git
-# 或直接下载 ZIP 文件
+git clone https://github.com/gloria-oss/policy-weekly.git
 
-# 2. 复制到 Claude Code skills 目录
+# 2. 复制到 skills 目录（Claude Code 和 Codeflicker 共用同一目录）
 cp -r policy-weekly ~/.claude/skills/
 
 # 3. 配置环境变量
@@ -38,20 +37,13 @@ export TAVILY_API_KEY="tvly-your-api-key-here"
 export OBSIDIAN_VAULT_PATH="/path/to/your/vault"
 ```
 
-**方法2：通过 Claude Code 安装**
-
-```bash
-# 在 Claude Code 中运行
-/install-skill /path/to/policy-weekly
-```
-
 ### 验证安装
 
 ```bash
-# 重启 Claude Code
-claude-code
+# 检查是否安装成功
+ls ~/.claude/skills/policy-weekly
 
-# 测试 skill
+# 在你使用的 AI 工具中测试
 /policy-weekly ai-policy
 ```
 
@@ -339,14 +331,14 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 ## 🙏 致谢
 
 - [Tavily](https://tavily.com) - 提供高质量的新闻搜索 API
-- [Claude Code](https://github.com/anthropics/claude-code) - 强大的 AI 编程助手
+- [Claude Code](https://github.com/anthropics/claude-code) - AI 编程助手
+- [Codeflicker](https://codeflicker.com) - AI 编程助手
 - [Obsidian](https://obsidian.md) - 优秀的知识管理工具
 
 ## 📮 联系方式
 
-- **问题反馈**: [GitHub Issues](https://github.com/your-username/policy-weekly/issues)
-- **功能建议**: [GitHub Discussions](https://github.com/your-username/policy-weekly/discussions)
-- **邮件**: your-email@example.com
+- **问题反馈**: [GitHub Issues](https://github.com/gloria-oss/policy-weekly/issues)
+- **功能建议**: [GitHub Discussions](https://github.com/gloria-oss/policy-weekly/discussions)
 
 ---
 
